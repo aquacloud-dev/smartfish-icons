@@ -4,7 +4,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Federico Vitale <federico.vitale@aquacloud.it>",
-  "private": true,
   "scripts": {
     "build": "tsup src",
     "dev": "tsup src --watch"
