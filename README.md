@@ -5,7 +5,7 @@ Icons from `untitled-ui` exported as react components.
 ## Installation
 
 ```
-  pnpm add @smartfish/icons
+  pnpm add @aquacloud-dev/smartfish-icons
 ```
 
 ## Usage
