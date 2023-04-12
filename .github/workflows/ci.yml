@@ -12,3 +12,27 @@ jobs:
       - uses: aquacloud-dev/github-actions/setup-node@main
       - run: pnpm install 
       - run: pnpm build
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+      - id: git
+        uses: aquacloud-dev/github-actions/setup-git@main
+      - id: bot
+        uses: aquacloud-dev/github-actions/setup-bot@main
+        with:
+          BOT_ID: ${{ secrets.BOT_ID }}
+          BOT_PEM: ${{ secrets.BOT_PEM }}
+      
+      - if: startsWith(github.ref, 'refs/heads/feature')
+        id: build-number
+        uses: aquacloud-dev/github-actions/get-build-number@main
+
+      - if: startsWith(github.ref, 'refs/heads/feature')
+        uses: aquacloud-dev/github-actions/git-tag@main
+
+      - if: startsWith(github.ref, 'refs/heads/main') || startsWith(github.ref, 'refs/heads/develop')
+        uses: aquacloud-dev/github-actions/semantic-release@main
+        env:
+          GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
