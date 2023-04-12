@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: aquacloud-dev/github-actions/setup-node@main
-      - run: pnpm install 
+      - run: pnpm install --no-frozen-lockfile
       - run: pnpm build
   release:
     runs-on: ubuntu-latest
