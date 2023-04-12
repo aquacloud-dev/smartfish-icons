@@ -20,7 +20,7 @@ jobs:
       - id: git
         uses: aquacloud-dev/github-actions/setup-git@main
       - id: bot
-        uses: aquacloud-dev/github-actions/setup-bot@main
+        uses: aquacloud-dev/github-actions/get-bot-token@main
         with:
           BOT_ID: ${{ secrets.BOT_ID }}
           BOT_PEM: ${{ secrets.BOT_PEM }}
