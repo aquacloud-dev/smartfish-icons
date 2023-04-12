@@ -8,15 +8,113 @@
     "build": "tsup src",
     "dev": "tsup src --watch"
   },
-  "dependencies": {
-    "@types/react": "^18.0.18",
-    "@types/react-dom": "^18.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tsup": "^6.6.3"
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./Alerts & feedback/*": {
+      "import": "./dist/Alerts & feedback/*.mjs",
+      "types": "./dist/Alerts & feedback/*.d.ts"
+    },
+    "./Alerts _ feedback/*": {
+      "import": "./dist/Alerts _ feedback/*.mjs",
+      "types": "./dist/Alerts _ feedback/*.d.ts"
+    },
+    "./Arrows/*": {
+      "import": "./dist/Arrows/*.mjs",
+      "types": "./dist/Arrows/*.d.ts"
+    },
+    "./Charts/*": {
+      "import": "./dist/Charts/*.mjs",
+      "types": "./dist/Charts/*.d.ts"
+    },
+    "./Communication/*": {
+      "import": "./dist/Communication/*.mjs",
+      "types": "./dist/Communication/*.d.ts"
+    },
+    "./Development/*": {
+      "import": "./dist/Development/*.mjs",
+      "types": "./dist/Development/*.d.ts"
+    },
+    "./Editor/*": {
+      "import": "./dist/Editor/*.mjs",
+      "types": "./dist/Editor/*.d.ts"
+    },
+    "./Education/*": {
+      "import": "./dist/Education/*.mjs",
+      "types": "./dist/Education/*.d.ts"
+    },
+    "./Files/*": {
+      "import": "./dist/Files/*.mjs",
+      "types": "./dist/Files/*.d.ts"
+    },
+    "./Finance & eCommerce/*": {
+      "import": "./dist/Finance & eCommerce/*.mjs",
+      "types": "./dist/Finance & eCommerce/*.d.ts"
+    },
+    "./Finance _ eCommerce/*": {
+      "import": "./dist/Finance _ eCommerce/*.mjs",
+      "types": "./dist/Finance _ eCommerce/*.d.ts"
+    },
+    "./General/*": {
+      "import": "./dist/General/*.mjs",
+      "types": "./dist/General/*.d.ts"
+    },
+    "./Images/*": {
+      "import": "./dist/Images/*.mjs",
+      "types": "./dist/Images/*.d.ts"
+    },
+    "./Layout/*": {
+      "import": "./dist/Layout/*.mjs",
+      "types": "./dist/Layout/*.d.ts"
+    },
+    "./Maps & travel/*": {
+      "import": "./dist/Maps & travel/*.mjs",
+      "types": "./dist/Maps & travel/*.d.ts"
+    },
+    "./Maps _ travel/*": {
+      "import": "./dist/Maps _ travel/*.mjs",
+      "types": "./dist/Maps _ travel/*.d.ts"
+    },
+    "./Media & devices/*": {
+      "import": "./dist/Media & devices/*.mjs",
+      "types": "./dist/Media & devices/*.d.ts"
+    },
+    "./Media _ devices/*": {
+      "import": "./dist/Media _ devices/*.mjs",
+      "types": "./dist/Media _ devices/*.d.ts"
+    },
+    "./Security/*": {
+      "import": "./dist/Security/*.mjs",
+      "types": "./dist/Security/*.d.ts"
+    },
+    "./Shapes/*": {
+      "import": "./dist/Shapes/*.mjs",
+      "types": "./dist/Shapes/*.d.ts"
+    },
+    "./Time/*": {
+      "import": "./dist/Time/*.mjs",
+      "types": "./dist/Time/*.d.ts"
+    },
+    "./Users/*": {
+      "import": "./dist/Users/*.mjs",
+      "types": "./dist/Users/*.d.ts"
+    },
+    "./Weather/*": {
+      "import": "./dist/Weather/*.mjs",
+      "types": "./dist/Weather/*.d.ts"
+    }
   },
   "devDependencies": {
+    "tsup": "^6.6.3",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
     "@types/node": "^18.13.0",
     "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
