@@ -1,6 +1,6 @@
 {
   "name": "@aquacloud-dev/smartfish-icons",
-  "version": "1.0.1-canary.4",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Federico Vitale <federico.vitale@aquacloud.it>",
