@@ -1,9 +1,20 @@
 {
   "name": "@aquacloud-dev/smartfish-icons",
-  "version": "1.0.1-canary.1",
+  "version": "1.0.1-canary.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Federico Vitale <federico.vitale@aquacloud.it>",
+  "devDependencies": {
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "scripts": {
     "build": "tsup src",
     "dev": "tsup src --watch"
@@ -11,110 +22,167 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./Alerts & feedback/*": {
-      "import": "./dist/Alerts & feedback/*.mjs",
-      "types": "./dist/Alerts & feedback/*.d.ts"
-    },
-    "./Alerts _ feedback/*": {
-      "import": "./dist/Alerts _ feedback/*.mjs",
-      "types": "./dist/Alerts _ feedback/*.d.ts"
+    "./AlertsAndFeedback/*": {
+      "import": "./dist/AlertsAndFeedback/*.mjs",
+      "require": "./dist/AlertsAndFeedback/*.js",
+      "types": "./dist/AlertsAndFeedback/*.d.ts"
     },
     "./Arrows/*": {
       "import": "./dist/Arrows/*.mjs",
+      "require": "./dist/Arrows/*.js",
       "types": "./dist/Arrows/*.d.ts"
     },
     "./Charts/*": {
       "import": "./dist/Charts/*.mjs",
+      "require": "./dist/Charts/*.js",
       "types": "./dist/Charts/*.d.ts"
     },
     "./Communication/*": {
       "import": "./dist/Communication/*.mjs",
+      "require": "./dist/Communication/*.js",
       "types": "./dist/Communication/*.d.ts"
     },
     "./Development/*": {
       "import": "./dist/Development/*.mjs",
+      "require": "./dist/Development/*.js",
       "types": "./dist/Development/*.d.ts"
     },
     "./Editor/*": {
       "import": "./dist/Editor/*.mjs",
+      "require": "./dist/Editor/*.js",
       "types": "./dist/Editor/*.d.ts"
     },
     "./Education/*": {
       "import": "./dist/Education/*.mjs",
+      "require": "./dist/Education/*.js",
       "types": "./dist/Education/*.d.ts"
     },
     "./Files/*": {
       "import": "./dist/Files/*.mjs",
+      "require": "./dist/Files/*.js",
       "types": "./dist/Files/*.d.ts"
     },
-    "./Finance & eCommerce/*": {
-      "import": "./dist/Finance & eCommerce/*.mjs",
-      "types": "./dist/Finance & eCommerce/*.d.ts"
-    },
-    "./Finance _ eCommerce/*": {
-      "import": "./dist/Finance _ eCommerce/*.mjs",
-      "types": "./dist/Finance _ eCommerce/*.d.ts"
+    "./FinanceAndCommerce/*": {
+      "import": "./dist/FinanceAndCommerce/*.mjs",
+      "require": "./dist/FinanceAndCommerce/*.js",
+      "types": "./dist/FinanceAndCommerce/*.d.ts"
     },
     "./General/*": {
       "import": "./dist/General/*.mjs",
+      "require": "./dist/General/*.js",
       "types": "./dist/General/*.d.ts"
     },
     "./Images/*": {
       "import": "./dist/Images/*.mjs",
+      "require": "./dist/Images/*.js",
       "types": "./dist/Images/*.d.ts"
     },
     "./Layout/*": {
       "import": "./dist/Layout/*.mjs",
+      "require": "./dist/Layout/*.js",
       "types": "./dist/Layout/*.d.ts"
     },
-    "./Maps & travel/*": {
-      "import": "./dist/Maps & travel/*.mjs",
-      "types": "./dist/Maps & travel/*.d.ts"
+    "./MapsAndTravel/*": {
+      "import": "./dist/MapsAndTravel/*.mjs",
+      "require": "./dist/MapsAndTravel/*.js",
+      "types": "./dist/MapsAndTravel/*.d.ts"
     },
-    "./Maps _ travel/*": {
-      "import": "./dist/Maps _ travel/*.mjs",
-      "types": "./dist/Maps _ travel/*.d.ts"
-    },
-    "./Media & devices/*": {
-      "import": "./dist/Media & devices/*.mjs",
-      "types": "./dist/Media & devices/*.d.ts"
-    },
-    "./Media _ devices/*": {
-      "import": "./dist/Media _ devices/*.mjs",
-      "types": "./dist/Media _ devices/*.d.ts"
+    "./MediaAndDevices/*": {
+      "import": "./dist/MediaAndDevices/*.mjs",
+      "require": "./dist/MediaAndDevices/*.js",
+      "types": "./dist/MediaAndDevices/*.d.ts"
     },
     "./Security/*": {
       "import": "./dist/Security/*.mjs",
+      "require": "./dist/Security/*.js",
       "types": "./dist/Security/*.d.ts"
     },
     "./Shapes/*": {
       "import": "./dist/Shapes/*.mjs",
+      "require": "./dist/Shapes/*.js",
       "types": "./dist/Shapes/*.d.ts"
     },
     "./Time/*": {
       "import": "./dist/Time/*.mjs",
+      "require": "./dist/Time/*.js",
       "types": "./dist/Time/*.d.ts"
     },
     "./Users/*": {
       "import": "./dist/Users/*.mjs",
+      "require": "./dist/Users/*.js",
       "types": "./dist/Users/*.d.ts"
     },
     "./Weather/*": {
       "import": "./dist/Weather/*.mjs",
+      "require": "./dist/Weather/*.js",
       "types": "./dist/Weather/*.d.ts"
     }
   },
-  "devDependencies": {
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.35",
-    "@types/react-dom": "^18.0.11",
-    "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ],
+      "./AlertsAndFeedback/*": [
+        "./dist/AlertsAndFeedback/*.d.ts"
+      ],
+      "./Arrows/*": [
+        "./dist/Arrows/*.d.ts"
+      ],
+      "./Charts/*": [
+        "./dist/Charts/*.d.ts"
+      ],
+      "./Communication/*": [
+        "./dist/Communication/*.d.ts"
+      ],
+      "./Development/*": [
+        "./dist/Development/*.d.ts"
+      ],
+      "./Editor/*": [
+        "./dist/Editor/*.d.ts"
+      ],
+      "./Education/*": [
+        "./dist/Education/*.d.ts"
+      ],
+      "./Files/*": [
+        "./dist/Files/*.d.ts"
+      ],
+      "./FinanceAndECommerce/*": [
+        "./dist/FinanceAndECommerce/*.d.ts"
+      ],
+      "./General/*": [
+        "./dist/General/*.d.ts"
+      ],
+      "./Images/*": [
+        "./dist/Images/*.d.ts"
+      ],
+      "./Layout/*": [
+        "./dist/Layout/*.d.ts"
+      ],
+      "./MapsAndTravel/*": [
+        "./dist/MapsAndTravel/*.d.ts"
+      ],
+      "./MediaAndDevices/*": [
+        "./dist/MediaAndDevices/*.d.ts"
+      ],
+      "./Security/*": [
+        "./dist/Security/*.d.ts"
+      ],
+      "./Shapes/*": [
+        "./dist/Shapes/*.d.ts"
+      ],
+      "./Time/*": [
+        "./dist/Time/*.d.ts"
+      ],
+      "./Users/*": [
+        "./dist/Users/*.d.ts"
+      ],
+      "./Weather/*": [
+        "./dist/Weather/*.d.ts"
+      ]
+    }
   }
 }
