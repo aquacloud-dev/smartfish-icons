@@ -1,8 +1,10 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-	sourcemap: false,
+	entry: ["src/**/*.tsx", "src/**/*.ts"],
+	sourcemap: "inline",
 	minify: true,
+	treeshake: true,
 	dts: true,
 	clean: true,
 	name: "Smartfish Icons",
@@ -10,4 +12,5 @@ export default defineConfig({
 	loader: {
 		".js": "jsx",
 	},
+	external: ["react"],
 });

@@ -1,22 +1,35 @@
 {
   "name": "@aquacloud-dev/smartfish-icons",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "1.0.1",
   "author": "Federico Vitale <federico.vitale@aquacloud.it>",
-  "scripts": {
-    "build": "tsup src",
-    "dev": "tsup src --watch"
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./Weather/*": {
+      "require": "./dist/Weather/*.js",
+      "import": "./dist/Weather/*.mjs",
+      "types": "./dist/Weather/*.d.ts"
+    }
   },
-  "dependencies": {
-    "@types/react": "^18.0.18",
-    "@types/react-dom": "^18.0.6",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tsup": "^6.6.3"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
     "@types/node": "^18.13.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "tsup": "^6.6.3"
   }
 }
