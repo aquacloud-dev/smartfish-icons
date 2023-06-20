@@ -1,14 +1,11 @@
 {
   "name": "@aquacloud-dev/smartfish-icons",
-  "version": "1.0.5",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "1.0.4",
+  "types": "*.d.ts",
   "author": "Federico Vitale <federico.vitale@aquacloud.it>",
   "scripts": {
-    "build": "tsup src/ && cp package.json dist/",
-    "prepack": "cp package.json dist/",
-    "pack": "cd dist && npm pack --pack-destination ..",
-    "postpack": "rm -rf package.tgz && mv *.tgz package.tgz",
+    "build": "tsup src/",
+    "pack": "./scripts/post-build.sh",
     "dev": "tsup --watch"
   },
   "peerDependencies": {
@@ -16,10 +13,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "tsup": "^6.6.3",
+    "@types/node": "^18.13.0",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
-    "@types/node": "^18.13.0",
+    "tsup": "^7.0.0",
     "typescript": "^4.9.5"
   }
 }

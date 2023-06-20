@@ -23,3 +23,9 @@ function MyComponent() {
   );
 }
 ```
+
+## Release
+To release a new version follow these steps:
+1. Bump the package.json `version`
+2. Run the `pack` script
+3. Run `npm publish <path-to-tarball> --tag <canary|latest>`
