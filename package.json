@@ -6,7 +6,9 @@
   "author": "Federico Vitale <federico.vitale@aquacloud.it>",
   "scripts": {
     "build": "tsup src/ && cp package.json dist/",
-    "pack": "cp package.json dist/ && (cd dist && npm pack --pack-destination ..) && rm -f package.tgz && mv *.tgz package.tgz",
+    "prepack": "cp package.json dist/",
+    "pack": "cd dist && npm pack --pack-destination ..",
+    "postpack": "rm -rf package.tgz && mv *.tgz package.tgz",
     "dev": "tsup --watch"
   },
   "peerDependencies": {
