@@ -11,7 +11,7 @@ Icons from `untitled-ui` exported as react components.
 ## Usage
 
 ```tsx
-import { HomeIcon } from "@aquacloud-dev/smartfish-icons";
+import HomeIcon from "@aquacloud-dev/smartfish-icons/HomeIcon";
 import Button from "@smartfish/ui/base/button";
 
 function MyComponent() {
